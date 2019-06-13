@@ -190,7 +190,13 @@ public:
 	uint32_t get_lastactivity(void) { return last_activity; };
 	bool any_actitity(void) { return (last_activity!=0); };
 
+	/* 
+	 * no FLARM for open source firmware 
+	 * CE 13 June 2019
+	 */
+	#ifdef FLARM
 	void flarm_expired(void){ print_line(FA_REPLYE_EXPIRED); };
+	#endif
 
 	void print_line(const char *type, int key, const char *msg);
 	void print(char *str);

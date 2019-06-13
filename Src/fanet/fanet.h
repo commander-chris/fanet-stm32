@@ -12,8 +12,14 @@
 extern "C" {
 #endif
 
-#define FLARM
-
+/* 
+ * no FLARM for open source firmware
+ * CE 13 June 2019
+ * 
+ * #define FLARM
+ * 
+ */
+ 
 #include "serial.h"
 
 void fanet_init(serial_t *serial);
